@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.example.shoppingapp"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.shoppingapp"
         minSdk = 26
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -33,6 +33,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures{
+        viewBinding = true
     }
 }
 
