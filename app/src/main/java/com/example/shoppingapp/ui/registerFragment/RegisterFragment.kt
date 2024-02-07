@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.example.shoppingapp.R
 import com.example.shoppingapp.databinding.FragmentRegisterBinding
+import com.example.shoppingapp.utils.Listeners
 import com.example.shoppingapp.utils.showSnackBar
 import com.example.shoppingapp.viewModel.RegisterViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -34,8 +35,12 @@ class RegisterFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         binding.btnRegister.setOnClickListener {
             validateRegisterDetails()
+        }
+        binding.tvLogin.setOnClickListener {
+            Listeners.registerToLogin(it)
         }
     }
 
